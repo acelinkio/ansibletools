@@ -34,9 +34,9 @@ RUN apk add --update --no-cache \
 
 RUN \
     # install terraform
-    wget https://releases.hashicorp.com/terraform/0.15.4/terraform_0.15.4_linux_amd64.zip \
-    && unzip terraform_0.15.4_linux_amd64.zip -d /bin/ \
-    && rm terraform_0.15.4_linux_amd64.zip \
+    wget https://releases.hashicorp.com/terraform/1.0.0/terraform_1.0.0_linux_amd64.zip \
+    && unzip terraform_1.0.0_linux_amd64.zip -d /bin/ \
+    && rm terraform_1.0.0_linux_amd64.zip \
     # install kubectl
     && wget https://dl.k8s.io/release/v1.21.1/bin/linux/amd64/kubectl \
     && chmod +x kubectl \
