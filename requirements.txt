@@ -1,4 +1,6 @@
-ansible==3.0.0
+ansible==4.1.0
+# required for AWX
+ansible-runner==1.4.7
 # required for ansible k8s module
 openshift==0.11.2
 # required for ansible parsing json
@@ -6,4 +8,4 @@ jmespath==0.10.0
 # required for ansible hashicorp consul lookup
 python-consul2==0.1.5
 # required for ansible hashicorp vault lookup
-hvac==0.10.13
+hvac==0.10.14
