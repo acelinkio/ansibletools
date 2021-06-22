@@ -3,7 +3,7 @@ ansible==4.1.0
 ## https://github.com/ansible/awx/issues/9917
 ansible-runner==2.0.0a3
 # required for ansible k8s module
-openshift==0.11.2
+kubernetes==17.17.0
 # required for ansible parsing json
 jmespath==0.10.0
 # required for ansible hashicorp consul lookup
