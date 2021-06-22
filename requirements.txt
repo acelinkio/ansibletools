@@ -1,6 +1,7 @@
 ansible==4.1.0
 # required for AWX
-ansible-runner==1.4.7
+## https://github.com/ansible/awx/issues/9917
+ansible-runner==2.0.0a3
 # required for ansible k8s module
 openshift==0.11.2
 # required for ansible parsing json
