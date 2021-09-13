@@ -1,4 +1,4 @@
-FROM python:3.9.5-alpine3.13
+FROM python:3.9.7-alpine3.14
 
 COPY requirements.txt ./
 
@@ -34,17 +34,17 @@ RUN apk add --update --no-cache \
 
 RUN \
     # install terraform
-    wget https://releases.hashicorp.com/terraform/1.0.0/terraform_1.0.0_linux_amd64.zip \
-    && unzip terraform_1.0.0_linux_amd64.zip -d /bin/ \
-    && rm terraform_1.0.0_linux_amd64.zip \
+    wget https://releases.hashicorp.com/terraform/1.0.6/terraform_1.0.6_linux_amd64.zip \
+    && unzip terraform_1.0.6_linux_amd64.zip -d /bin/ \
+    && rm terraform_1.0.6_linux_amd64.zip \
     # install kubectl
-    && wget https://dl.k8s.io/release/v1.21.2/bin/linux/amd64/kubectl \
+    && wget https://dl.k8s.io/release/v1.22.1/bin/linux/amd64/kubectl \
     && chmod +x kubectl \
     && mv kubectl /bin/ \
     # install helm
-    && wget https://get.helm.sh/helm-v3.6.1-linux-amd64.tar.gz \
-    && tar -xf helm-v3.6.1-linux-amd64.tar.gz linux-amd64/helm \
+    && wget https://get.helm.sh/helm-v3.6.3-linux-amd64.tar.gz \
+    && tar -xf helm-v3.6.3-linux-amd64.tar.gz linux-amd64/helm \
     && mv linux-amd64/helm /bin/ \
-    && rm -rf linux-amd64 helm-v3.5.4-linux-amd64.tar.gz
+    && rm -rf linux-amd64 helm-v3.6.3-linux-amd64.tar.gz
 
 CMD ["sh"]

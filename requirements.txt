@@ -1,12 +1,12 @@
-ansible==4.1.0
+ansible==4.5.0
 # required for AWX
 ## https://github.com/ansible/awx/issues/9917
-ansible-runner==2.0.0a3
+ansible-runner==2.0.2
 # required for ansible k8s module
-kubernetes==17.17.0
+kubernetes==18.20.0
 # required for ansible parsing json
 jmespath==0.10.0
 # required for ansible hashicorp consul lookup
 python-consul2==0.1.5
 # required for ansible hashicorp vault lookup
-hvac==0.10.14
+hvac==0.11.0
