@@ -4,11 +4,13 @@ COPY requirements.txt ./
 
 # install core packages
 RUN apt-get -qqy update \
-    && apt-get -qqy --no-install-recommends install \
+    && DEBIAN_FRONTEND=noninteractive apt-get -qqy --no-install-recommends install \
     python3 \
     python3-pip \
     git \
     curl \
+    wget \
+    unzip \
     nano \
     openssh-client \
     sshpass \
