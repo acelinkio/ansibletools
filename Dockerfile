@@ -1,11 +1,12 @@
-FROM python:3.9.7
+FROM ubuntu:20.04
 
 COPY requirements.txt ./
 
 # install core packages
 RUN apt-get -qqy update \
     && apt-get -qqy --no-install-recommends install \
-    # common
+    python3 \
+    python3-pip \
     git \
     curl \
     nano \
