@@ -6,3 +6,6 @@ Tools included are for running modules/lookups for terraform, helm, kubenetes, H
 ## Similar projects/references:
 * https://github.com/cytopia/docker-ansible
 * https://github.com/GabLeRoux/ansible-docker-image
+
+## Notes
+Switching away from alpine linux as a base due to not having many python precompiled wheel packages

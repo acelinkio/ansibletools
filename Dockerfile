@@ -1,9 +1,10 @@
-FROM python:3.9.7-alpine3.14
+FROM python:3.9.7
 
 COPY requirements.txt ./
 
 # install core packages
-RUN apk add --update --no-cache \
+RUN apt-get -qqy update \
+    && apt-get -qqy --no-install-recommends install \
     # common
     git \
     curl \
@@ -11,26 +12,13 @@ RUN apk add --update --no-cache \
     openssh-client \
     sshpass \
     rsync \
-    # telnet
-    busybox-extras \
-    # dig nsloop 
-    bind-tools \
-    # required for cyptography
-    ## https://cryptography.io/en/latest/installation/#alpine
-    musl-dev \
-    libffi-dev \
-    openssl-dev \
-    cargo
+    telnet \
+    dnsutils \
+    && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
 # install ansible using temporary virtual packages
-RUN apk add --update --no-cache \
-    --virtual .build-deps \
-        make \
-        gcc \
-        python3-dev \
-    && pip install --upgrade pip \
-    && pip install --no-cache-dir -r requirements.txt \
-    && apk del --no-network .build-deps
+RUN pip install --upgrade pip \
+    && pip install --no-cache-dir -r requirements.txt
 
 RUN \
     # install terraform

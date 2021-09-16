@@ -1,6 +1,5 @@
 ansible==4.5.0
 # required for AWX
-## https://github.com/ansible/awx/issues/9917
 ansible-runner==2.0.2
 # required for ansible k8s module
 kubernetes==18.20.0
