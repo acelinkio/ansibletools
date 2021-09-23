@@ -6,6 +6,7 @@ COPY requirements.txt ./
 RUN apt-get -qqy update \
     && DEBIAN_FRONTEND=noninteractive apt-get -qqy --no-install-recommends install \
     python3 \
+    python3-dev \
     python3-pip \
     git \
     curl \
