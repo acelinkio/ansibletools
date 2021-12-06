@@ -1,12 +1,12 @@
-ansible==4.7.0
+ansible==5.0.1
 # required for AWX
-ansible-runner==2.0.3
+ansible-runner==2.1.1
 # required for ansible k8s module
-kubernetes==19.15.0
+kubernetes==20.13.0
 # required for ansible parsing json
 jmespath==0.10.0
 # required for aws modules
-boto3==1.19.6
+boto3==1.20.21
 # required for ansible hashicorp consul lookup
 python-consul2==0.1.5
 # required for ansible hashicorp vault lookup

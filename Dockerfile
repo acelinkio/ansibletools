@@ -23,9 +23,9 @@ RUN pip install --upgrade pip \
 
 RUN \
     # install terraform
-    wget https://releases.hashicorp.com/terraform/1.0.10/terraform_1.0.10_linux_amd64.zip \
-    && unzip terraform_1.0.10_linux_amd64.zip -d /bin/ \
-    && rm terraform_1.0.10_linux_amd64.zip \
+    wget https://releases.hashicorp.com/terraform/1.0.11/terraform_1.0.11_linux_amd64.zip \
+    && unzip terraform_1.0.11_linux_amd64.zip -d /bin/ \
+    && rm terraform_1.0.11_linux_amd64.zip \
     # install helm
     ## https://helm.sh/docs/topics/version_skew/
     && wget https://get.helm.sh/helm-v3.7.1-linux-amd64.tar.gz \
